@@ -14,6 +14,9 @@ const setup = (props = {}, state = null) => {
   return shallow(<App {...props} />);
 };
 
+/*
+Returns shallowwrapper containing node(s) with the given data-test value 
+*/
 const findByTestAttr = (wrapper, val) => {
   return wrapper.find(`[data-test="${val}"]`);
 };
