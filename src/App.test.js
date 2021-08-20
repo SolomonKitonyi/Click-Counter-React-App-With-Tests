@@ -18,7 +18,11 @@ test("Renders increment button", () => {
   expect(button.length).toBe(1);
 });
 
-test("Renders counter display", () => {});
+test("Renders counter display", () => {
+  const wrapper = shallow(<App />);
+  const counterDisplay = wrapper.find("[data-test='counter-display']");
+  expect(counterDisplay.length).toBe(1);
+});
 
 test("Counter starts at 0", () => {});
 
